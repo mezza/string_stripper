@@ -1,0 +1,27 @@
+StringStripper
+==============
+
+Rails plugin that enables you to quickly strip strings.
+
+
+Example
+=======
+
+class Story < ActiveRecord::Base
+  strip_strings :title, :abstract, :text
+end
+
+s = Story.create(
+  :title    => ' Lorem ipsum dolor sit amet    ',
+  :abstract => '     Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.     ',
+  :text     => '   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+)
+
+# Spaces, tabs, line breaks at the beginnings and ends of the strings, be gone!
+
+s.title
+# => "Lorem ipsum dolor sit amet"
+
+
+
+Copyright (c) 2011 Christoph Edthofer, released under the MIT license
