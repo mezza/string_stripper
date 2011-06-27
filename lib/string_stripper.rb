@@ -6,16 +6,11 @@ module StringStripper
       
       class_inheritable_accessor :string_stripper_string_attributes
       self.string_stripper_string_attributes = args
-      puts @string_stripper_string_attributes.inspect
       
       before_validation :string_stripper_run
       
       include InstanceMethods
     end
-  end
-  
-  module ClassMethods
-    # ...
   end
   
   module InstanceMethods
