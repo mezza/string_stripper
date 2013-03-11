@@ -4,7 +4,7 @@ module StringStripper
     def strip_strings(*args)
       options = args.extract_options!
       
-      class_inheritable_accessor :string_stripper_string_attributes
+      class_accessor :string_stripper_string_attributes
       self.string_stripper_string_attributes = args
       
       before_validation :string_stripper_run

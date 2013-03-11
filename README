@@ -3,6 +3,8 @@ StringStripper
 
 Rails plugin that enables you to quickly strip strings.
 
+This is a fork of the original version by Christoph Edthofer
+
 
 Example
 =======
